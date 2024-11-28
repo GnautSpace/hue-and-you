@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.options{
+    display: flex;
+    gap: 15px;
+}
+.opt{
+    width: 300px;
+    height: 250px;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+    
+}
+.deuteranopia{
+    background: linear-gradient(to left,#2a3bd3,#1e3566);
+    color: #dcdf28;
+}
+.protanopia{
+    background: linear-gradient(to right,#f3e564,#fcff42);
+    color: #2a3bd3;
+}
+.tritanopia{
+    background: linear-gradient(to right,#ff6b6b,#ff0066);
+    color: #961e56;
+}
+.achromatopsia{
+    background: linear-gradient(to right,#1f1e1d,#000000);
+    color: #f3f1f1;
+}
+.selected {
+    border: 3px solid #040504; 
+    box-shadow: 0 0 10px 5px rgba(38, 41, 38, 0.5);
+}
+.card-opt{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.bg-select,.text-select{
+    border: none;
+    border-radius: 25px;
+}
+.bg-opt,.text-opt{
+    justify-content: center;
+}
+
+
+.buttons{
+    padding: 40px 20px;
+    display: flex;
+    gap: 50px;
+}
+.btn{
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 15px;
+    background: #1f1e1da1;
+    color: #000;
+    box-shadow: 0 3px 3px 0px rgba(38, 41, 38, 0.5);
+
+}
+.btn:hover{
+    background: #000;
+    color: #fff;
+
+}
+
+.btn:focus, .bg-select:focus, .text-select:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.sub-adv-opt {
+    min-height: 100px;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-style: italic;
+}
+
+.opt:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+.bg-opt,.text-opt{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/*
+@media (max-width: 768px) {
+    .opt {
+        width: 100%;
+        height: auto;
+    }
+}*/

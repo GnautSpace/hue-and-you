@@ -1,0 +1,26 @@
+{
+    "name": "Hue & You",
+    "version": "1.0",
+    "description": "An accessible extension for CVD users",
+    "manifest_version": 3,
+    "permissions": ["scripting", "activeTab","storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": ["http://*/*","https://*/*"],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "assets/icons/logo.png",
+        "48": "assets/icons/logo.png",
+        "128": "assets/icons/logo.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content/content.js"]
+      }
+    ]
+  }
+  
