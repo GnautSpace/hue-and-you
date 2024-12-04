@@ -13,9 +13,7 @@ dist-ssr
 *.local
 build
 .env
-background.js
-content.js
-Gemini.js
+
 
 # Editor directories and files
 .vscode/*
