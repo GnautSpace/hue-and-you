@@ -3,23 +3,26 @@
     "version": "1.0",
     "description": "An accessible extension for CVD users",
     "manifest_version": 3,
-    "permissions": ["scripting", "activeTab","storage"],
+    "permissions": ["scripting", "activeTab","storage","https://generativelanguage.googleapis.com/"],
     "background": {
       "service_worker": "background.js"
     },
     "host_permissions": ["http://*/*","https://*/*"],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
     "action": {
-      "default_popup": "popup/popup.html",
+      "default_popup": "index.html",
       "default_icon": {
-        "16": "assets/icons/logo.png",
-        "48": "assets/icons/logo.png",
-        "128": "assets/icons/logo.png"
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
       }
     },
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["content/content.js"]
+        "js": ["content.js"]
       }
     ]
   }
